@@ -1,0 +1,82 @@
+nav {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background: #1b242f;
+  border-bottom: 3px solid #fc9105;
+  height: 50px;
+  text-align: left;
+  width: 100%;
+  z-index: 99;
+}
+nav.fixed {
+  bottom: inherit;
+  left: 0;
+  position: fixed;
+  top: 0;
+}
+nav.fixed.desk {
+  animation: popDown 0.5s;
+}
+nav .link-wrap {
+  background: #333;
+  height: 0;
+  max-width: 1200px;
+  overflow: hidden;
+  position: absolute;
+  top: 53px;
+  transition: height 0.3s ease-out;
+  width: 100%;
+}
+nav .link-wrap.visible {
+  height: 220px;
+}
+nav .link-wrap div {
+  cursor: pointer;
+  font-size: 12pt;
+  padding: 12px 20px;
+  text-transform: uppercase;
+  transition: color 0.5s;
+}
+nav .link-wrap div:first-child {
+  padding: 25px 20px 12px 20px;
+}
+nav .link-wrap div:hover {
+  color: #48a368;
+}
+nav .mdi-menu {
+  font-size: 30pt;
+  line-height: 36pt;
+  margin: auto 0;
+  position: absolute;
+  right: 5vw;
+  top: 0;
+}
+nav .active {
+  color: #48a368;
+}
+
+@media screen and (min-width: 600px) {
+  nav .link-wrap {
+    background: none;
+    height: initial;
+    overflow: visible;
+    position: initial;
+    text-align: left;
+  }
+  nav .link-wrap .visible {
+    height: initial;
+  }
+  nav .link-wrap div {
+    display: inline;
+    font-size: initial;
+    margin: 0 20px;
+    padding: initial;
+  }
+  nav .link-wrap div:first-child {
+    padding: 0;
+  }
+  nav .mdi-menu {
+    display: none;
+  }
+}

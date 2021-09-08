@@ -1,0 +1,32 @@
+.canvas {
+  background: #252934;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+}
+
+.intro__text {
+  pointer-events: none;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.intro__button {
+  margin-bottom: 53px;
+  /* padding: 12px 40px 12px 15px; */
+  position: relative;
+  color: #fff;
+}
+
+.highlight {
+  color: #fc9105;
+}
+
+@media screen and (min-width: 600px) {
+  .intro__text {
+    font-size: 32pt;
+    line-height: 36pt;
+  }
+}
