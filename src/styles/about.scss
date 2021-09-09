@@ -1,0 +1,32 @@
+.item {
+  min-width: 100px;
+  max-width: 230px;
+  text-align: center;
+  justify-content: flex-start;
+  height: 230px;
+}
+
+.item__bullet {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 0.75rem;
+  background: $secondary-color;
+  color: white;
+}
+
+.item__bullet .icon {
+  font-size: 25px;
+}
+
+.item__headline {
+  color: $secondary-color;
+  font-size: 30px;
+}
+
+@media screen and (min-width: 600px) {
+}
+
+.skills li {
+  display: inline-block;
+}

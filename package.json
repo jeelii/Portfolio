@@ -5,17 +5,19 @@
   "main": "webpack.config.js",
   "devDependencies": {
     "css-loader": "^6.2.0",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^2.2.2",
     "node-sass": "^6.0.0",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
-    "webpack": "^5.51.1",
+    "webpack": "^5.52.0",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^4.1.0"
   },
   "scripts": {
-    "dev": "npx webpack serve"
+    "dev": "npx webpack serve",
+    "build": "npx webpack build"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,7 @@
   },
   "homepage": "https://github.com/jennysvensson/full-stack-portfolio#readme",
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "normalize.css": "^8.0.1",
     "pts": "^0.10.6"
   }

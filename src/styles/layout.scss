@@ -2,19 +2,21 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.wrap {
+  flex-wrap: wrap;
 }
 
 section {
-  color: #616161;
-  line-height: 11pt;
+  color: $darkest-color;
   padding: 70px 0 70px 0;
   position: relative;
-}
-section.intro {
-  color: #fff;
-  height: calc(100vh + 53px);
-  padding: 0 10px;
 }
 
 section .container {

@@ -42,18 +42,30 @@ nav .link-wrap div:first-child {
   padding: 25px 20px 12px 20px;
 }
 nav .link-wrap div:hover {
-  color: #48a368;
+  color: $secondary-color-lighter;
 }
-nav .mdi-menu {
-  font-size: 30pt;
+nav .hamburger-icon {
+  font-size: 20pt;
   line-height: 36pt;
   margin: auto 0;
   position: absolute;
   right: 5vw;
-  top: 0;
+  top: 2px;
 }
 nav .active {
-  color: #48a368;
+  color: $secondary-color-lighter;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
 }
 
 @media screen and (min-width: 600px) {
@@ -76,7 +88,7 @@ nav .active {
   nav .link-wrap div:first-child {
     padding: 0;
   }
-  nav .mdi-menu {
+  nav .hamburger-icon {
     display: none;
   }
 }

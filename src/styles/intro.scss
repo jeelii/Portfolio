@@ -1,5 +1,11 @@
+section.intro {
+  color: #fff;
+  height: calc(100vh + 53px);
+  padding: 0 10px;
+}
+
 .canvas {
-  background: #252934;
+  background: $darkest-color;
   height: 100%;
   left: 0;
   position: absolute;
@@ -20,8 +26,17 @@
   color: #fff;
 }
 
+.intro__button .icon {
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
+
+.button:hover .icon {
+  transform: rotate(90deg);
+}
+
 .highlight {
-  color: #fc9105;
+  color: $primary-color;
 }
 
 @media screen and (min-width: 600px) {

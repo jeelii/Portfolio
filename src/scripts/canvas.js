@@ -1,6 +1,5 @@
-import { CanvasSpace, Create, Polygon, Line, Vec } from "pts";
+import { CanvasSpace, Create } from "pts";
 
-// Initiate Space and Form
 const space = new CanvasSpace("#pts").setup({
   bgcolor: "#1c292e",
   resize: true,
@@ -13,11 +12,10 @@ let ratio = {};
 let fraction;
 
 const getRatio = (area) => {
-  const landscape = area[0] > area[1] ? 1 : 0;
   return {
     count: Math.floor((area[0] * area[1]) / 20000),
     length: area[1] * 0.6,
-    width: landscape ? area[0] * 0.25 : area[0] * 0.4,
+    width: (area[1] * 0.4 * area[0]) / area[1],
   };
 };
 
@@ -36,7 +34,7 @@ const getColor = (fraction) => {
 space.add({
   start: function (time, ftime) {
     ratio = getRatio(space.innerBound.size);
-    console.log(ratio.count, ratio.length, ratio.width);
+    // console.log(ratio.count, ratio.length, ratio.width);
     pts = Create.distributeRandom(space.innerBound, ratio.count);
   },
   animate: function (time, ftime) {
@@ -47,8 +45,8 @@ space.add({
     );
     pts.forEach((p, i) => {
       fraction = i / pts.length;
-      form.fillOnly(getColor(1)).point(p, getValue(11, fraction), "square");
-      form.fillOnly("#fff").points(p, getValue(7, fraction), "square");
+      form.fillOnly(getColor(0)).point(p, 0.5, "square");
+      form.fillOnly("#fff").point(p, getValue(0.7, fraction), "square");
       form
         .strokeOnly(getColor(fraction), 1)
         .line([p, p.$add(ratio.width, -ratio.length)]);
@@ -66,5 +64,4 @@ space.add({
   },
 });
 
-// bind mouse events and play animation
 space.bindMouse().bindTouch().play();

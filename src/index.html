@@ -5,35 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS</title>
+    <script
+      src="https://kit.fontawesome.com/67daaf6b4a.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
-    <section class="intro flex">
+    <section id="home" class="intro flex">
       <div id="pts" class="canvas"></div>
       <div class="flex">
         <div class="intro__text">
           <p>Hello, I am <span class="highlight">Jenny Svensson</span>.</p>
           <p>I am a Full-Stack Developer in Malmö, Sweden.</p>
         </div>
-        <button class="button intro__button">Learn more</button>
+        <button class="button intro__button" href="#about">
+          Learn more <i class="icon fas fa-arrow-right"></i>
+        </button>
       </div>
       <nav class="flex desk">
         <div class="link-wrap">
           <div class="page-link active" dest="home">home</div>
-          <div class="page-link" dest="about">about</div>
+          <div class="page-link" dest="about" href="#about">about</div>
           <div class="page-link" dest="portfolio">portfolio</div>
           <div class="page-link" dest="contact">contact</div>
         </div>
-        <i class="mdi mdi-menu"></i>
+        <i class="hamburger-icon fas fa-bars"></i>
       </nav>
     </section>
   </body>
-  <section class="flex">
-    <h2>What I do</h2>
-    <div class="skills">
-      <button class="button">Full-stack</button>
-      <button class="button">Back-end</button>
-      <button class="button">Front-end</button>
+  <section id="about" class="flex">
+    <div class="container">
+      <h2 class="section__headline">What I do</h2>
+      <h3 class="section__subheader">
+        Things I am skilled at and passionate about
+      </h3>
+      <div class="flex row wrap">
+        <div class="item flex">
+          <div class="item__bullet flex">
+            <i class="icon fas fa-sitemap"></i>
+          </div>
+          <h4 class="item__headline">Full-stack development</h4>
+          <p>I see the big picture and can make technical decisions fast.</p>
+        </div>
+        <div class="flex item">
+          <div class="flex item__bullet">
+            <i class="icon fas fa-code"></i>
+          </div>
+          <h4 class="item__headline">Beautiful code</h4>
+          <p>
+            A love for problem solving and challenges drive me to write clever,
+            easy-to-read code.
+          </p>
+        </div>
+        <div class="flex item">
+          <div class="flex item__bullet">
+            <i class="icon far fa-lightbulb"></i>
+          </div>
+          <h4 class="item__headline">Usability</h4>
+          <p>Strong preference for easy to use, intuitive UX/UI.</p>
+        </div>
+      </div>
+      <div class="skills">
+        <button class="button">All</button>
+        <button class="button">Full-stack</button>
+        <button class="button">Back-end</button>
+        <button class="button">Front-end</button>
+        <button class="button">Software</button>
+        <ul>
+          <li class="skills__frontend">HTML</li>
+          <li class="skills__frontend">CSS</li>
+          <li class="skills__frontend">SASS</li>
+          <li class="skills__frontend">React</li>
+          <li class="skills__frontend">JavaScript</li>
+          <li class="skills__backend">PHP</li>
+          <li class="skills__backend">MySQL</li>
+        </ul>
+      </div>
     </div>
   </section>
   <section class="flex">
@@ -42,5 +90,7 @@
   </section>
   <section class="flex">
     <h2>About me</h2>
+    <button class="button">Journey</button>
+    <button class="button">Personal</button>
   </section>
 </html>
