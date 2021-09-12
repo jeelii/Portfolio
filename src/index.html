@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="shortcut icon" href="assets/favicon.ico" />
+    <link rel="shortcut icon" href="favicon.ico" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,8 +18,10 @@
       <div id="pts" class="canvas"></div>
       <div class="flex">
         <div class="intro__text">
-          <p>Hello, I am <span class="highlight">Jenny Svensson</span>.</p>
-          <p>I am a Full-Stack Developer in Malmö, Sweden.</p>
+          <h1>
+            Hello, I am <span class="highlight">Jenny Svensson</span>.<br />
+            I am a Full-Stack Developer in Malmö, Sweden.
+          </h1>
         </div>
         <button class="button intro__button" href="#about">
           Learn more <i class="icon fas fa-arrow-right"></i>
@@ -40,7 +44,7 @@
       <h3 class="section__subheader">
         Things I am skilled at and passionate about
       </h3>
-      <div class="flex row wrap">
+      <div class="collection flex row wrap">
         <div class="item flex">
           <div class="item__bullet flex">
             <i class="icon fas fa-sitemap"></i>
@@ -54,7 +58,7 @@
           </div>
           <h4 class="item__headline">Beautiful code</h4>
           <p>
-            A love for problem solving and challenges drive me to write clever,
+            My love for problem solving and challenges drive me to write clever,
             easy-to-read code.
           </p>
         </div>
@@ -63,9 +67,13 @@
             <i class="icon far fa-lightbulb"></i>
           </div>
           <h4 class="item__headline">Usability</h4>
-          <p>Strong preference for easy to use, intuitive UX/UI.</p>
+          <p>I advocate for easy to use, intuitive UX and UI.</p>
         </div>
       </div>
+      <h2 class="section__headline">Skills</h2>
+      <h3 class="section__subheader">
+        Interested to know more about my skills?
+      </h3>
       <div class="skills">
         <button class="button">All</button>
         <button class="button">Full-stack</button>
@@ -77,20 +85,40 @@
           <li class="skills__frontend">CSS</li>
           <li class="skills__frontend">SASS</li>
           <li class="skills__frontend">React</li>
-          <li class="skills__frontend">JavaScript</li>
+          <li class="skills__fullstack">JavaScript</li>
           <li class="skills__backend">PHP</li>
           <li class="skills__backend">MySQL</li>
+          <li class="skills__backend">Mongo DB</li>
+          <li class="skills__backend">Node.js</li>
+          <li class="skills__fullstack">WordPress</li>
         </ul>
       </div>
     </div>
   </section>
   <section class="flex">
-    <h2>Portfolio</h2>
-    <p>Going to add things that I am proud of here.</p>
+    <h2 class="section__headline">Portfolio</h2>
+    <h3 class="section__subheader">Recent projects test</h3>
+    <div class="collection flex row wrap">
+      <div class="item flex">
+        <div class="item__image">
+          <img src="images/todo-list-js-mobile.png" />
+          <img src="images/todo-list-js-desktop.png" />
+        </div>
+      </div>
+    </div>
   </section>
   <section class="flex">
-    <h2>About me</h2>
-    <button class="button">Journey</button>
-    <button class="button">Personal</button>
+    <div class="container">
+      <h2 class="section__headline">More about me</h2>
+      <button class="button">Journey</button>
+      <button class="button">Personal</button>
+      <div class="bio">
+        <p>
+          I discovered an interest for HTML and CSS already 1998 when I was 16
+          years old and internet was a baby.
+        </p>
+      </div>
+      <div class="personal hidden"></div>
+    </div>
   </section>
 </html>

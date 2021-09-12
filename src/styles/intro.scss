@@ -1,7 +1,8 @@
 section.intro {
   color: #fff;
   height: calc(100vh + 53px);
-  padding: 0 10px;
+  padding: 0px;
+  overflow: hidden;
 }
 
 .canvas {
@@ -14,6 +15,7 @@ section.intro {
 }
 
 .intro__text {
+  padding: 0 10px;
   pointer-events: none;
   font-weight: 600;
   z-index: 1;
@@ -41,7 +43,7 @@ section.intro {
 
 @media screen and (min-width: 600px) {
   .intro__text {
-    font-size: 32pt;
-    line-height: 36pt;
+    font-size: 1.5rem;
+    line-height: 1.2;
   }
 }
