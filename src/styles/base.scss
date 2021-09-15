@@ -18,6 +18,18 @@ p {
   margin-bottom: 0.5em;
 }
 
+a,
+a:hover,
+a:focus,
+a:visited {
+  text-decoration: none;
+  color: $secondary-color;
+}
+
+a:hover {
+  color: $primary-color;
+}
+
 .section__headline {
   text-transform: uppercase;
   margin-bottom: 1em;

@@ -1,0 +1,15 @@
+.section__portfolio {
+  background: $grey;
+}
+
+.item__image > * {
+  width: 100%;
+  height: auto;
+}
+
+.portfolio__item {
+  background: white;
+  padding: 2px;
+  min-width: 300px;
+  max-width: 500px;
+}

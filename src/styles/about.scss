@@ -33,7 +33,6 @@
   max-width: 230px;
   text-align: center;
   justify-content: flex-start;
-  height: 230px;
 }
 
 .item__bullet {
@@ -55,7 +54,7 @@
   font-size: 30px;
 }
 
-.skills li {
+.tags li {
   display: inline-block;
   background: $darkest-color;
   color: white;

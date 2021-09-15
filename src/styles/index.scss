@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;400;600&display=swap");
 $darkest-color: #252934;
+$grey: #dae2e3;
 $primary-color: #fc9105;
 $secondary-color: #006273;
 $secondary-color-lighter: #00879e;
@@ -10,4 +11,5 @@ $third-color: #48a368;
 @import "./layout.scss";
 @import "./intro.scss";
 @import "./about.scss";
+@import "./portfolio.scss";
 @import "./nav.scss";

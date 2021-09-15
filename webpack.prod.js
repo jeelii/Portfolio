@@ -19,6 +19,8 @@ module.exports = merge(common, {
       new OptimizeCssAssetsPlugin(),
       new TerserPlugin(),
       new HtmlWebpackPlugin({
+        HTML_PATH: path.resolve(__dirname, "src"), // <- Now I only pass the folder path
+        favicon: "./src/assets/favicon.ico",
         template: "./src/index.html",
         minify: {
           removeAttributeQuotes: true,

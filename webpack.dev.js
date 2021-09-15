@@ -12,6 +12,7 @@ module.exports = merge(common, {
     hotUpdateChunkFilename: "hot/hot-update.js",
     hotUpdateMainFilename: "hot/hot-update.json",
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
