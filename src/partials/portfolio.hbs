@@ -1,0 +1,68 @@
+<section class="section__portfolio flex">
+  <h2 class="section__headline">
+    Portfolio
+  </h2>
+  <h3 class="section__subheader">
+    Selected projects
+  </h3>
+
+  <div class="portfolio collection flex row wrap">
+    {{#each portfolio.items}}
+      <div class="portfolio__item item flex">
+
+        <figure class="item__figure">
+
+          <div class="item__overlay__container">
+
+            <div class="item__links">
+              {{#if code}}
+                <a href={{code}} title="Source code" class="icon__code">
+                  <i class="icon bi bi-file-code-fill"></i>
+                </a>
+              {{/if}}
+              {{#if link}}
+                <a href={{link}} title="See it in action" class="icon__launch">
+                  <i class="icon bi bi-arrow-up-right-square-fill"></i>
+                </a>
+              {{/if}}
+            </div>
+
+            <div class="item__overlay flex">
+              <ul class="item__tags tags">
+                {{#each tags}}
+                  <li class="skills__item">
+                    {{{this}}}
+                  </li>
+                {{/each}}
+              </ul>
+            </div>
+
+          </div>
+
+          {{#if image}}
+            <img class="item__image" src={{image}} alt={{title}} />
+          {{/if}}
+        </figure>
+
+        <div class="portfolio__info">
+          <h3 class="item__headline portfolio__headline">
+            {{title}}
+            {{#if responsive}}
+              <i class="bi bi-laptop"></i><i class="bi bi-phone"></i>
+            {{/if}}
+          </h3>
+          <p>
+            {{description}}
+          </p>
+          {{#if team}}
+            <p>
+              Team:
+              {{team}}
+            </p>
+          {{/if}}
+        </div>
+
+      </div>
+    {{/each}}
+  </div>
+</section>

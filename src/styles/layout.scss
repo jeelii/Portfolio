@@ -1,32 +1,32 @@
 .flex {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .row {
-  flex-direction: row;
+    flex-direction: row;
 }
 
 .wrap {
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 section {
-  color: $darkest-color;
-  padding: 70px 0 70px 0;
-  position: relative;
+    color: $darkest-color;
+    padding: 70px 0 70px 0;
+    position: relative;
 }
 
 section .container {
-  box-sizing: border-box;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 10px;
-  width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 10px;
+    width: 100%;
 }
 
 .collection {
-  margin-bottom: 3em;
+    margin-bottom: 3em;
 }

@@ -15,7 +15,7 @@ module.exports = merge(common, {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./src/index.hbs",
     }),
   ],
   module: {
@@ -26,15 +26,7 @@ module.exports = merge(common, {
       },
     ],
   },
-  // devServer: {
-  //   devMiddleware: {
-  //     index: true,
-  //     mimeTypes: { "text/html": ["phtml"] },
-  //     serverSideRender: true,
-  //     writeToDisk: true,
-  //   },
-  // },
-  // devtool: "source-map",
+  devtool: "source-map",
   // module: {
   //   rules: [
   //     {

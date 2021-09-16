@@ -5,11 +5,13 @@ $primary-color: #fc9105;
 $secondary-color: #006273;
 $secondary-color-lighter: #00879e;
 $third-color: #48a368;
+$fourth-color: #fecea8;
 
 @import "~normalize.css";
 @import "./base.scss";
 @import "./layout.scss";
+@import "./nav.scss";
 @import "./intro.scss";
 @import "./about.scss";
 @import "./portfolio.scss";
-@import "./nav.scss";
+@import "./contact.scss";

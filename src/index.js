@@ -1,6 +1,5 @@
-require("./index.html");
-
 import "./styles/index.scss";
 
+import "./scripts/canvas_lines";
 import "./scripts/stickynav";
-import "./scripts/canvas";
+import "./scripts/skills";

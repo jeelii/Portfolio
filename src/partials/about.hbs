@@ -1,0 +1,60 @@
+  <section id="about" class="flex">
+    <div class="container">
+      <h2 class="section__headline">
+        What I do
+      </h2>
+      <h3 class="section__subheader">
+        Things I am skilled at and passionate about
+      </h3>
+
+      <div class="collection flex row wrap">
+        <div class="item flex">
+          <div class="item__bullet flex">
+            <i class="icon bi bi-diagram-3"></i>
+          </div>
+          <h4 class="item__headline">Full-stack development</h4>
+          <p>I see the big picture and can make technical decisions fast.</p>
+        </div>
+        <div class="flex item">
+          <div class="flex item__bullet">
+            <i class="icon bi bi-code-slash"></i>
+          </div>
+          <h4 class="item__headline">Beautiful code</h4>
+          <p>
+            My love for problem solving and challenges drive me to write clever,
+            easy-to-read DRY and test driven code.
+          </p>
+        </div>
+        <div class="flex item">
+          <div class="flex item__bullet">
+            <i class="icon bi bi-lightbulb"></i>
+          </div>
+          <h4 class="item__headline">Usability</h4>
+          <p>I advocate for easy to use, intuitive UX and UI.</p>
+        </div>
+      </div>
+
+      <h2 class="section__headline">
+        Skills
+      </h2>
+      <h3 class="section__subheader">
+        As a full-stack developer, these are some of the tools I use.
+      </h3>
+      {{! <button class="button">All</button>
+    <button class="button">Full-stack</button>
+    <button class="button">Back-end</button>
+    <button class="button">Front-end</button>
+    <button class="button">Software</button> }}
+      <ul id="skills" class="collection flex row wrap tags">
+        {{#each skills.items}}
+          {{#each sub-categories}}
+            {{#each skills}}
+              <li class="tags__category--{{../../category}} tags__category--{{../name}} skills__level--{{level}} skills__item">
+                {{name}}
+              </li>
+            {{/each}}
+          {{/each}}
+        {{/each}}
+      </ul>
+    </div>
+  </section>

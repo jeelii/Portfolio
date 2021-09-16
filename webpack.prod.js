@@ -21,7 +21,9 @@ module.exports = merge(common, {
       new HtmlWebpackPlugin({
         HTML_PATH: path.resolve(__dirname, "src"), // <- Now I only pass the folder path
         favicon: "./src/assets/favicon.ico",
-        template: "./src/index.html",
+        // template: "./src/index.html",
+        title: "Custom template using Handlebars",
+        template: "./src/index.hbs",
         minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: true,

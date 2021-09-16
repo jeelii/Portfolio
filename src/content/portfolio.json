@@ -1,0 +1,40 @@
+{
+  "items": [{
+      "title": "Activity Tracker",
+      "responsive": "yes",
+      "image": "images/activity-tracker-desktop.png",
+      "image2": "images/activity-tracker-desktop-log-date.png",
+      "tags": [
+        "NodeJS",
+        "Express",
+        "React",
+        "JavaScript",
+        "HTML",
+        "SASS",
+        "CSS"
+      ],
+      "description": "The \"hackday\" project during the </SALT> training. Make any REST app during 8 hours.",
+      "link": "https://github.com/jennysvensson",
+      "code": "https://github.com/jennysvensson"
+    },
+    {
+      "title": "JavaScript TO-DO-app",
+      "responsive": "yes",
+      "image2": "images/todo-list-js-desktop.png",
+      "image": "images/todo-list-js-mobile.png",
+      "tags": ["JavaScript", "HTML", "CSS"],
+      "description": "Weekend project during the </SALT> training.",
+      "code": "https://github.com/jennysvensson"
+    },
+    {
+      "title": "Rentify",
+      "responsive": "yes",
+      "team": "Me, Elias Helander and Raghul Mohan",
+      "image": "images/rentify-desktop.png",
+      "image2": "images/rentify-mobile.png",
+      "tags": ["Node.JS", "PostgresQL", "React.JS", "HTML", "CSS", "Docker"],
+      "description": "Final project of the </SALT> training.",
+      "link": "https://rentify-salt.netlify.app/"
+    }
+  ]
+}
