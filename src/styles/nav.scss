@@ -1,9 +1,15 @@
+@keyframes popDown {
+  0% {
+    transform: translateY(-100px);
+  }
+}
+
 nav {
   bottom: 0;
   left: 0;
   position: absolute;
   background: #1b242f;
-  border-bottom: 3px solid #fc9105;
+  border-bottom: 3px solid $primary-color;
   height: 50px;
   text-align: left;
   width: 100%;
@@ -23,7 +29,7 @@ nav.fixed.desk {
 
 .nav__wrap {
   list-style: none;
-  background: #333;
+  background: $darkest-color;
   height: 0;
   max-width: 1200px;
   overflow: hidden;
@@ -38,10 +44,10 @@ nav.fixed.desk {
 }
 
 .nav__link {
-  display: inline-block;
+  display: block;
 }
 
-nav a {
+.nav__link {
   cursor: pointer;
   font-size: 12pt;
   padding: 12px 20px;
@@ -49,15 +55,15 @@ nav a {
   transition: color 0.5s;
 }
 
-nav a:first-child {
+.nav__link:first-child {
   padding: 25px 20px 12px 20px;
 }
 
-nav a:hover {
+.nav__link:hover {
   color: $secondary-color-lighter;
 }
 
-nav .hamburger-icon {
+nav .menu-icon {
   font-size: 20pt;
   line-height: 36pt;
   margin: auto 0;
@@ -70,9 +76,6 @@ nav .active {
   color: $secondary-color-lighter;
 }
 
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-
 .sticky {
   position: fixed;
   top: 0;
@@ -82,10 +85,9 @@ nav .active {
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 
-.sticky+.content {
-  padding-top: 60px;
-}
-
+// .sticky+.content {
+//   padding-top: 60px;
+// }
 @media screen and (min-width: 600px) {
   .nav__wrap {
     background: none;
@@ -94,19 +96,19 @@ nav .active {
     position: initial;
     text-align: left;
   }
-  .nav__wrap .visible {
+  .nav__wrap.visible {
     height: initial;
   }
-  .nav__wrap li {
-    display: inline;
+  .nav__link {
+    display: inline-block;
     font-size: initial;
     margin: 0 20px;
     padding: initial;
   }
-  .nav__wrap li:first-child {
+  .nav__link:first-child {
     padding: 0;
   }
-  .hamburger-icon {
+  .menu-icon {
     display: none;
   }
 }

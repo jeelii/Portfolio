@@ -30,6 +30,10 @@ module.exports = {
                 require("./src/partials/home.hbs")
               );
               Handlebars.registerPartial(
+                "nav",
+                require("./src/partials/nav.hbs")
+              );
+              Handlebars.registerPartial(
                 "aboutSection",
                 require("./src/partials/about.hbs")
               );
