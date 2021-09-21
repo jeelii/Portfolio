@@ -1,22 +1,23 @@
 <section id="contact" class="flex">
   <div class="container">
     <h2 class="section__headline">More about me</h2>
-    <div class="flex row">
-      <figure class="about__image">
+    <div class="profile flex row wrap">
+      <figure class="profile__image">
         <img src="images/jenny_svensson.jpg" />
       </figure>
-      <div class="flex">
-        <button class="button">Journey</button>
-        <button class="button">Personal</button>
-        <div class="bio">
+      <div class="story flex">
+        {{! <button class="button">Journey</button>
+        <button class="button">Personal</button> }}
+        <div class="story__bio">
+          <h3>Journey</h3>
           <p>
-            I discovered an interest for HTML and CSS already 1998 when I was 16
-            years old and internet was a baby. Became a Graphic Designer coding
-            on the side, more and more, until I discovered it was my real
-            passion.
+            I discovered an interest for HTML and CSS when internet was a baby
+            so we have come a long way. I became a Graphic Designer coding on
+            the side, added technologies to the tech-stack and coded more and
+            more, until I discovered it was my real passion.
           </p>
         </div>
-        <div class="personal">
+        {{! <div class="story__personal hidden">
           <h3>Activities</h3>
           <p>On my free time I dance a lot. I have danced swing for 8 years. I
             also work out minimum 10 minutes every day or do yoga.</p>
@@ -27,32 +28,32 @@
           <h3>Life-style</h3>
           <p>I try to live an eco friendly life-style, trying to make a small
             footprint.</p>
-        </div>
+        </div> }}
       </div>
     </div>
 
     <div class="contact collection flex row wrap">
       <div class="item flex">
         <div class="item__bullet flex">
-          <i class="icon bi bi-github"></i>
+          <span class="mdi mdi-github"></span>
         </div>
-        <h4 class="item__headline">GitHub</h4>
+        <h4 class="contact__headline">GitHub</h4>
         <p>Check out my GitHub</p>
       </div>
       <div class="flex item">
         <div class="flex item__bullet">
-          <i class="icon bi bi-linkedin"></i>
+          <span class="mdi mdi-linkedin"></span>
         </div>
-        <h4 class="item__headline">LinkedIn</h4>
+        <h4 class="contact__headline">LinkedIn</h4>
         <p>
           Connect with me on LinkedIn
         </p>
       </div>
       <div class="flex item">
         <div class="flex item__bullet">
-          <i class="icon bi bi-envelope-open-fill"></i>
+          <span class="mdi mdi-email-outline"></span>
         </div>
-        <h4 class="item__headline">E-mail</h4>
+        <h4 class="contact__headline">E-mail</h4>
         <p>
           Send me an e-mail
         </p>

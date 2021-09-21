@@ -2,24 +2,32 @@
   <div id="pts" class="canvas"></div>
   <div class="flex">
     <div class="intro__text">
-      <h1>
-        Hello, I am
+      <h1 class="intro__headline">
+        Hello! I am
         <span class="highlight">Jenny Svensson</span>.<br />
         I am a Full-Stack Developer in Malmö, Sweden.
       </h1>
     </div>
-    <button class="button intro__button" href="#about">
+    <a class="button intro__button" href="#about">
       Learn more
-      <i class="icon fas fa-arrow-right"></i>
-    </button>
+      <span class="mdi mdi-arrow-right"></span>
+    </a>
   </div>
   <nav class="flex desk">
-    <div class="link-wrap">
-      <div class="page-link active" dest="home">home</div>
-      <div class="page-link" dest="about" href="#about">about</div>
-      <div class="page-link" dest="portfolio">portfolio</div>
-      <div class="page-link" dest="contact">contact</div>
-    </div>
+    <ul class="nav__wrap">
+      <li class="nav__link active">
+        <a href="#home">home</a>
+      </li>
+      <li class="nav__link" href="#about">
+        <a href="#about">about</a>
+      </li>
+      <li class="nav__link">
+        <a href="#portfolio">portfolio</a>
+      </li>
+      <li class="nav__link">
+        <a href="#contact">contact</a>
+      </li>
+    </ul>
     <i class="hamburger-icon fas fa-bars"></i>
   </nav>
 </section>

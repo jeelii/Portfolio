@@ -3,9 +3,14 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: Urbanist;
+  font-family: $primary-font;
   color: $darkest-color;
+  font-weight: $thin;
 }
 
 h2,
@@ -56,12 +61,17 @@ a:hover {
   font-size: 13pt;
   padding: 10px 20px;
   transition: all 0.5s;
+  color: white;
 }
+
 .button:hover {
   background-color: $primary-color;
   border-color: $primary-color;
+  color: white;
 }
 
-.icon {
-  vertical-align: middle;
+.button:hover,
+.button:focus,
+.button:visited {
+  color: white;
 }

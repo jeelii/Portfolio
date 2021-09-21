@@ -17,23 +17,24 @@ section.intro {
 .intro__text {
   padding: 0 10px;
   pointer-events: none;
-  font-weight: 600;
   z-index: 1;
+}
+
+.intro__headline {
+  font-weight: $thin;
 }
 
 .intro__button {
   margin-bottom: 53px;
-  /* padding: 12px 40px 12px 15px; */
   position: relative;
-  color: #fff;
+  font-size: 25px;
 }
 
-.intro__button .icon {
-  margin-left: 5px;
+.intro__button .mdi::before {
   transition: transform 0.3s;
 }
 
-.button:hover .icon {
+.button:hover .mdi::before {
   transform: rotate(90deg);
 }
 

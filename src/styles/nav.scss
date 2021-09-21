@@ -9,16 +9,20 @@ nav {
   width: 100%;
   z-index: 99;
 }
+
 nav.fixed {
   bottom: inherit;
   left: 0;
   position: fixed;
   top: 0;
 }
+
 nav.fixed.desk {
   animation: popDown 0.5s;
 }
-nav .link-wrap {
+
+.nav__wrap {
+  list-style: none;
   background: #333;
   height: 0;
   max-width: 1200px;
@@ -28,22 +32,31 @@ nav .link-wrap {
   transition: height 0.3s ease-out;
   width: 100%;
 }
-nav .link-wrap.visible {
+
+.nav__wrap.visible {
   height: 220px;
 }
-nav .link-wrap div {
+
+.nav__link {
+  display: inline-block;
+}
+
+nav a {
   cursor: pointer;
   font-size: 12pt;
   padding: 12px 20px;
   text-transform: uppercase;
   transition: color 0.5s;
 }
-nav .link-wrap div:first-child {
+
+nav a:first-child {
   padding: 25px 20px 12px 20px;
 }
-nav .link-wrap div:hover {
+
+nav a:hover {
   color: $secondary-color-lighter;
 }
+
 nav .hamburger-icon {
   font-size: 20pt;
   line-height: 36pt;
@@ -52,43 +65,48 @@ nav .hamburger-icon {
   right: 5vw;
   top: 2px;
 }
+
 nav .active {
   color: $secondary-color-lighter;
 }
 
+
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
 }
 
+
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
+
+.sticky+.content {
   padding-top: 60px;
 }
 
 @media screen and (min-width: 600px) {
-  nav .link-wrap {
+  .nav__wrap {
     background: none;
     height: initial;
     overflow: visible;
     position: initial;
     text-align: left;
   }
-  nav .link-wrap .visible {
+  .nav__wrap .visible {
     height: initial;
   }
-  nav .link-wrap div {
+  .nav__wrap li {
     display: inline;
     font-size: initial;
     margin: 0 20px;
     padding: initial;
   }
-  nav .link-wrap div:first-child {
+  .nav__wrap li:first-child {
     padding: 0;
   }
-  nav .hamburger-icon {
+  .hamburger-icon {
     display: none;
   }
 }
