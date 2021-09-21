@@ -50,6 +50,7 @@ nav.fixed.desk {
 .nav__link {
   cursor: pointer;
   font-size: 12pt;
+  font-weight: $bold;
   padding: 12px 20px;
   text-transform: uppercase;
   transition: color 0.5s;
