@@ -3,3 +3,6 @@ Simple portfolio to showcase some projects and my skills as a Full-Stack Develop
 
 Tech-stack:
 JavaScript, HTML, SCSS, CSS, Handlebars, Webpack
+
+Launch website:
+https://jennysvensson.github.io/full-stack-portfolio/
