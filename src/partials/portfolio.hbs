@@ -8,61 +8,67 @@
 
   <div class="portfolio collection flex row--top wrap">
     {{#each portfolio.items}}
-      <div class="project flex">
+      {{#unless hidden}}
+        {{#if image}}
+          <div class="project flex">
 
-        <figure class="project__figure">
+            <figure class="project__figure">
 
-          <div class="project__overlay__container">
+              <div class="project__overlay__container">
 
-            <div class="project__links">
-              {{#if code}}
-                <a href={{code}} title="Source code" class="icon__code">
-                  <span class="mdi mdi-code-not-equal-variant"></span>
-                </a>
+                <div class="project__links">
+                  {{#if code}}
+                    <a href={{code}} title="Source code" class="icon__code">
+                      <span class="mdi mdi-code-not-equal-variant"></span>
+                    </a>
+                  {{/if}}
+                  {{#if link}}
+                    <a
+                      href={{link}}
+                      title="See it in action"
+                      class="icon__launch"
+                    >
+                      <span class="mdi mdi-launch"></span>
+                    </a>
+                  {{/if}}
+                </div>
+
+                <div class="project__overlay flex">
+                  <ul class="project__tags tags">
+                    {{#each tags}}
+                      <li class="skills__item">
+                        {{{this}}}
+                      </li>
+                    {{/each}}
+                  </ul>
+                </div>
+
+              </div>
+
+              <img class="project__image" src={{image}} alt={{title}} />
+            </figure>
+
+            <div class="portfolio__info">
+              <h3 class="project__headline portfolio__headline">
+                {{title}}
+              </h3>
+              <p>
+                {{#if responsive}}
+                  <span class="mdi mdi-cellphone-link"></span>
+                {{/if}}
+                {{description}}
+              </p>
+              {{#if team}}
+                <p>
+                  Team:
+                  {{team}}
+                </p>
               {{/if}}
-              {{#if link}}
-                <a href={{link}} title="See it in action" class="icon__launch">
-                  <span class="mdi mdi-launch"></span>
-                </a>
-              {{/if}}
-            </div>
-
-            <div class="project__overlay flex">
-              <ul class="project__tags tags">
-                {{#each tags}}
-                  <li class="skills__item">
-                    {{{this}}}
-                  </li>
-                {{/each}}
-              </ul>
             </div>
 
           </div>
-
-          {{#if image}}
-            <img class="project__image" src={{image}} alt={{title}} />
-          {{/if}}
-        </figure>
-
-        <div class="portfolio__info">
-          <h3 class="project__headline portfolio__headline">
-            {{title}}
-            {{#if responsive}}
-              <span class="mdi mdi-cellphone-link"></span>
-            {{/if}}
-          </h3>
-          <p>
-            {{description}}
-          </p>
-          {{#if team}}
-            <p>
-              Team:
-              {{team}}
-            </p>
-          {{/if}}
-        </div>
-
-      </div>
+        {{/if}}
+      {{/unless}}
     {{/each}}
   </div>
 </section>
