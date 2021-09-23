@@ -8,8 +8,8 @@ nav {
   bottom: 0;
   left: 0;
   position: absolute;
-  background: #1b242f;
-  border-bottom: 3px solid $primary-color;
+  background: $secondary-color-darker;
+  border-bottom: 3px solid $secondary-color-lighter;
   height: 50px;
   text-align: left;
   width: 100%;
@@ -60,7 +60,11 @@ nav.fixed.desk {
   padding: 25px 20px 12px 20px;
 }
 
-.nav__link:hover {
+.nav__link a {
+  color: white;
+}
+
+.nav__link a:hover {
   color: $secondary-color-lighter;
 }
 
@@ -73,8 +77,8 @@ nav .menu-icon {
   top: 2px;
 }
 
-nav .active {
-  color: $secondary-color-lighter;
+nav .active a {
+  color: $primary-color;
 }
 
 .sticky {

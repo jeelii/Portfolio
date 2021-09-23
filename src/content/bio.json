@@ -1,46 +1,23 @@
 {
   "items": [{
-      "category": "Frontend",
+      "category": "Education",
       "sub-categories": [{
-          "name": "Basics",
-          "skills": [{
-              "name": "HTML",
-              "level": "5"
-            },
-            {
-              "name": "CSS",
-              "level": "3"
-            },
-            {
-              "name": "SASS",
-              "level": "3"
-            },
-            {
-              "name": "JavaScript",
-              "level": "5"
-            },
-            {
-              "name": "BEM",
-              "level": "3"
-            }
-          ]
-        },
-        {
-          "name": "Frameworks",
-          "skills": [{
-              "name": "React.JS",
-              "level": "3"
-            },
-            {
-              "name": "Webpack",
-              "level": "3"
-            }
-          ]
-        }
-      ]
+        "name": "School of Applied Technology </Salt>",
+        "skills": [
+          "TDD",
+          "HTML",
+          "CSS",
+          "SCSS",
+          "JavaScript",
+          "BEM",
+          "React.JS",
+          "Webpack"
+        ],
+        "description": "Intensive bootcamp to become a Full-Stack JavaScript Developer (four including the prep courses)."
+      }]
     },
     {
-      "category": "Database",
+      "category": "Experience",
       "sub-categories": [{
           "name": "Relational",
           "skills": [{

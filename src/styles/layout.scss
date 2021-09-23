@@ -11,7 +11,7 @@
 
 .row--top {
   flex-direction: row;
-  align-items: inherit;
+  align-items: baseline;
 }
 
 .wrap {
@@ -22,7 +22,6 @@ section {
   color: $darkest-color;
   padding: 70px 0 70px 0;
   position: relative;
-  min-height: 100vh;
   scroll-snap-align: center;
 }
 

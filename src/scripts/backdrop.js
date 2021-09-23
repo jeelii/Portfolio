@@ -32,33 +32,33 @@ const getColor = (fraction) => {
 };
 
 space.add({
-  start: function (time, ftime) {
+  start: function(time, ftime) {
     ratio = getRatio(space.innerBound.size);
     pts = Create.distributeRandom(space.innerBound, ratio.count);
   },
-  animate: function (time, ftime) {
+  animate: function(time, ftime) {
     if (space.pointer.id === "move" || space.pointer.id === "click") {
       pts.sort(
         (a, b) =>
-          a.$subtract(space.pointer).magnitudeSq() -
-          b.$subtract(space.pointer).magnitudeSq()
+        a.$subtract(space.pointer).magnitudeSq() -
+        b.$subtract(space.pointer).magnitudeSq()
       );
     }
     pts.forEach((p, i) => {
       fraction = i / pts.length;
       form.fillOnly("fc9105").point(p, getValue(0.9, fraction), "square");
       form
-        .strokeOnly(getColor(fraction), 1)
+        .strokeOnly(getColor(fraction), 2)
         .line([p, p.$add(ratio.width, -ratio.length)]);
       p.rotate2D(0.00003 / fraction, space.innerBound.center);
     });
   },
-  action: function (type, x, y, event) {
+  action: function(type, x, y, event) {
     if (type == "click") {
       pts[pts.length - 1] = space.pointer;
     }
   },
-  resize: function (size, event) {
+  resize: function(size, event) {
     ratio = getRatio(space.innerBound.size);
     pts = Create.distributeRandom(space.innerBound, ratio.count);
   },

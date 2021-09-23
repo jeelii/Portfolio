@@ -14,6 +14,11 @@
 .story {
   max-width: 90%;
   margin-bottom: 2em;
+  font-size: 1.1em;
+}
+
+.story .highlight {
+  font-weight: $bold;
 }
 
 .contact {
@@ -39,6 +44,14 @@
     width: auto;
   }
   .story {
-    max-width: 600px;
+    max-width: 580px;
+  }
+  .story__row {
+    flex-wrap: nowrap;
+  }
+  .story__chapter {
+    width: 30%;
+    text-align: right;
+    margin-right: 1em;
   }
 }
