@@ -5,4 +5,4 @@ Tech-stack:
 JavaScript, HTML, SCSS, CSS, Handlebars, Webpack
 
 Launch website:
-https://jennysvensson.github.io/full-stack-portfolio/
+https://jennysvensson.com/
