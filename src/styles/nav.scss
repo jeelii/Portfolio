@@ -4,6 +4,12 @@
   }
 }
 
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
 nav {
   bottom: 0;
   left: 0;
@@ -57,7 +63,7 @@ nav.fixed.desk {
 }
 
 .nav__link:first-child {
-  padding: 25px 20px 12px 20px;
+  padding-top: 18px;
 }
 
 .nav__link a {
@@ -115,5 +121,8 @@ nav .active a {
   }
   .menu-icon {
     display: none;
+  }
+  .fade-in {
+    animation: popDown 0.75s ease both;
   }
 }

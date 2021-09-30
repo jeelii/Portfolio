@@ -6,7 +6,7 @@ section.intro {
 }
 
 .canvas {
-  background: $darkest-color;
+  background: $darkest-color url("/src/images/backdrop.png") center center/cover;
   height: 100%;
   left: 0;
   position: absolute;
