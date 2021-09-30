@@ -1,32 +1,43 @@
 {
   "items": [{
+      "title": "Rentify",
+      "responsive": "yes",
+      "team": "Me, Elias Helander and Raghul Mohan",
+      "image": "images/rentify-desktop.png",
+      "image2": "images/rentify-mobile.png",
+      "tags": ["Node.JS", "PostgreSQL", "React.JS", "Docker", "Firebase"],
+      "description": "Rent stuff you don't need to buy! Final project of the </SALT> training.",
+      "link": "https://rentify-salt.netlify.app/",
+      "code": "https://github.com/eliashelander/rentify"
+    },
+    {
       "title": "Activity Tracker",
       "responsive": "yes",
-      "image": "images/activity-tracker-desktop-1000w.png",
-      "image2": "images/activity-tracker-desktop-log-date-1000w.png",
+      "image": "images/activity-tracker-desktop.png",
+      "image2": "images/activity-tracker-desktop-log-date.png",
       "tags": ["REST", "NodeJS", "Express", "React", "JavaScript", "SASS"],
       "description": "Track your workouts with this app! My React + REST app as a \"hackday\" project during the </SALT> training.",
       "code": "https://github.com/jennysvensson/ActivityTracker"
     },
     {
-      "title": "JavaScript TO-DO-app",
+      "title": "React TO-DO-app",
       "responsive": "yes",
-      "image2": "images/todo-list-js-desktop-1000w.png",
-      "image": "images/todo-list-js-mobile-1000w.png",
-      "tags": ["JavaScript", "HTML", "CSS"],
-      "description": "A vanilla JavaScript app that lets you create and edit your todo-list, and even stores it in the browser for you until next time. Weekend project during the </SALT> training.",
-      "code": "https://github.com/jennysvensson/To-do-App-JS"
+      "image2": "images/todo-list-react-desktop.png",
+      "image": "images/todo-list-react-mobile.png",
+      "tags": ["React", "JavaScript", "HTML", "CSS"],
+      "description": "A React app that lets you create and edit your todo-list, and even stores it in the browser for you until next time. Weekend project during the </SALT> training.",
+      "code": "https://github.com/jennysvensson/To-Do-App-React",
+      "link": "https://jennysvensson.github.io/To-Do-App-React/"
     },
     {
-      "title": "Rentify",
+      "title": "JavaScript TO-DO-app",
       "responsive": "yes",
-      "team": "Me, Elias Helander and Raghul Mohan",
-      "image": "images/rentify-desktop-1000w.png",
-      "image2": "images/rentify-mobile-1000w.png",
-      "tags": ["Node.JS", "PostgreSQL", "React.JS", "Docker", "Firebase"],
-      "description": "Rent stuff you don't need to buy! Final project of the </SALT> training.",
-      "link": "https://rentify-salt.netlify.app/",
-      "code": "https://github.com/eliashelander/rentify"
+      "image": "images/todo-list-js-desktop.png",
+      "image2": "images/todo-list-js-mobile.png",
+      "tags": ["JavaScript", "HTML", "CSS"],
+      "description": "A vanilla JavaScript app that lets you create and edit your todo-list, and even stores it in the browser for you until next time. Weekend project during the </SALT> training.",
+      "code": "https://github.com/jennysvensson/To-do-App-JS",
+      "link": "https://jennysvensson.github.io/To-do-App-JS/"
     },
     {
       "title": "Avfallskollen",

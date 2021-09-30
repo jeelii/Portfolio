@@ -81,7 +81,6 @@
 .project {
   background: white;
   width: 95%;
-  min-width: 300px;
   text-align: left;
   align-items: flex-start;
   justify-content: flex-start;
@@ -112,14 +111,14 @@
   font-size: 22px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
   .project {
-    width: 45%;
+    max-width: 45%;
   }
 }
 
 @media screen and (min-width: 1120px) {
   .project {
-    width: 30%;
+    max-width: 30%;
   }
 }
