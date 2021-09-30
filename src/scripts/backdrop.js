@@ -8,14 +8,18 @@ const space = new CanvasSpace("#pts").setup({
 const form = space.getForm();
 
 let pts = [];
-let ratio = {};
+let ratio = {
+  count: 10,
+  h: 100,
+  w: 100
+};
 let fraction;
 
 const getRatio = (area) => {
   return {
-    count: (area[0] * area[1]) / 17000,
-    length: area[1],
-    width: (area[1] * 0.7 * area[0]) / area[1],
+    count: (area[0] * area[1]) / 14000,
+    h: area[1],
+    w: area[0],
   };
 };
 
@@ -23,42 +27,54 @@ const getValue = (max, fraction) => {
   return max - max * fraction;
 };
 
-const getColor = (fraction) => {
-  const red = getValue(0, fraction);
-  const green = getValue(135, fraction);
-  const blue = getValue(158, fraction);
-  const opacity = getValue(1, fraction);
-  return `rgba(${red}, ${green}, ${blue}, ${opacity})`;
+const RGB_Linear_Shade = (p, c) => {
+  var i = parseInt, r = Math.round, [a, b, c, d] = c.split(","), P = p < 0, t = P ? 0 : 255 * p, P = P ? 1 + p : 1 - p;
+  return "rgb" + (d ? "a(" : "(") + r(i(a[3] == "a" ? a.slice(5) : a.slice(4)) * P + t) + "," + r(i(b) * P + t) + "," + r(i(c) * P + t) + (d ? "," + d : ")");
+}
+
+const getColor = (p, ratio, fraction) => {
+  const xPos = p[0];
+  const yPos = p[1];
+  const xMax = ratio.w;
+  const yMax = ratio.h;
+  const shade = yPos > yMax / 2 ? -yPos / 2 / yMax : (yMax-yPos) / yMax/2;
+  const opacity = shade > 0 ? 1 - shade : 1 + shade;
+  const c1 = `rgba(252, 145, 5,${opacity})`; // orange
+  const c2 = `rgba(117, 217, 160,${opacity})`;
+  const c3 = `rgba(72, 163, 104,${opacity})`;
+  let color = xPos > xMax / 2 ? c2 : c3;
+  if (fraction < .15) color = c1;
+  return RGB_Linear_Shade(shade, color)
 };
 
 space.add({
-  start: function(time, ftime) {
+  start: function (time, ftime) {
     ratio = getRatio(space.innerBound.size);
     pts = Create.distributeRandom(space.innerBound, ratio.count);
   },
-  animate: function(time, ftime) {
+  animate: function (time, ftime) {
     if (space.pointer.id === "move" || space.pointer.id === "click") {
       pts.sort(
         (a, b) =>
-        a.$subtract(space.pointer).magnitudeSq() -
-        b.$subtract(space.pointer).magnitudeSq()
+          a.$subtract(space.pointer).magnitudeSq() -
+          b.$subtract(space.pointer).magnitudeSq()
       );
     }
     pts.forEach((p, i) => {
       fraction = i / pts.length;
-      form.fillOnly("fc9105").point(p, getValue(0.9, fraction), "square");
       form
-        .strokeOnly(getColor(fraction), 2)
-        .line([p, p.$add(ratio.width, -ratio.length)]);
-      p.rotate2D(0.00003 / fraction, space.innerBound.center);
+        .fillOnly(getColor(p, ratio, fraction))
+        .point(p, getValue(9, fraction), "square");
+      p.rotate2D(0.0003 / fraction/2, space.pointer);
     });
   },
-  action: function(type, x, y, event) {
+  action: function (type, x, y, event) {
     if (type == "click") {
+      console.log(getColor(space.pointer, ratio, fraction));
       pts[pts.length - 1] = space.pointer;
     }
   },
-  resize: function(size, event) {
+  resize: function (size, event) {
     ratio = getRatio(space.innerBound.size);
     pts = Create.distributeRandom(space.innerBound, ratio.count);
   },
