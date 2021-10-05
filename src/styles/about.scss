@@ -11,11 +11,10 @@
   height: 40px;
   border-radius: 50%;
   margin-bottom: 0.75rem;
-  background: $secondary-color;
+  background: $primary-color;
   color: white;
   transition: all 2s;
   font-size: 30px;
-  opacity: 0.5;
 }
 
 .item:hover .item__bullet {
@@ -32,7 +31,7 @@
   90% {}
   100% {
     transform: scale(1.1);
-    opacity: 1;
+    background: mix($primary-color,black,80%);
   }
 }
 
@@ -52,7 +51,7 @@
 }
 
 .item__headline {
-  color: $secondary-color;
+  color: $primary-color;
   font-size: 30px;
 }
 
@@ -68,32 +67,32 @@
   padding: 5px 10px;
   background: $darkest-color;
   color: white;
-  transition: opacity 0.2s;
+  transition: all 0.2s;
 }
 
 .skills__level--5 {
   font-size: 2em;
-  opacity: 1;
+  background: mix($darkest-color,black, 96%);
 }
 
 .skills__level--4 {
   font-size: 1.75em;
-  opacity: 0.92;
+  background: mix($darkest-color,white, 96%);
 }
 
 .skills__level--3 {
   font-size: 1.3em;
-  opacity: 0.84;
+  background: mix($darkest-color,white, 92%);
 }
 
 .skills__level--2 {
   font-size: 1em;
-  opacity: 0.76;
+  background: mix($darkest-color,white, 88%);
 }
 
 .skills__level--1 {
   font-size: 0.8em;
-  opacity: 0.68;
+  background: mix($darkest-color,white, 84%);
 }
 
 .tags__category--Frontend {
@@ -101,7 +100,7 @@
 }
 
 .tags__category--Backend {
-  color: $secondary-color-lighter;
+  color: $fifth-color;
 }
 
 .tags__category--Database {
@@ -113,7 +112,7 @@
 }
 
 .skills__item:hover {
-  opacity: 1;
+  background: $darkest-color;
 }
 
 @media screen and (min-width: 600px) {}

@@ -14,8 +14,8 @@ nav {
   bottom: 0;
   left: 0;
   position: absolute;
-  background: $secondary-color-darker;
-  border-bottom: 3px solid $secondary-color-lighter;
+  background: mix($primary-color,black, 40%);
+  border-bottom: 3px solid $highlight;
   height: 50px;
   text-align: left;
   width: 100%;
@@ -71,7 +71,7 @@ nav.fixed.desk {
 }
 
 .nav__link a:hover {
-  color: $secondary-color-lighter;
+  color: $highlight;
 }
 
 nav .menu-icon {

@@ -19,6 +19,7 @@
 
 .story .highlight {
   font-weight: $bold;
+  color: $third-color;
 }
 
 .contact {
@@ -30,7 +31,7 @@
 }
 
 .contact__headline {
-  color: $secondary-color;
+  color: $primary-color;
   font-weight: $bold;
   font-size: 1.2em;
 }

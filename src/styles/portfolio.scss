@@ -1,5 +1,5 @@
 .section__portfolio {
-  background: $grey;
+  background: mix($primary-color,white, 12%);
 }
 
 .portfolio {
@@ -100,11 +100,11 @@
 }
 
 .project__links a {
-  color: $secondary-color-lighter;
+  color: $secondary-color;
 }
 
 .project__links a:hover {
-  color: $primary-color;
+  color: $highlight;
 }
 
 .portfolio__headline {

@@ -30,21 +30,29 @@ const getValue = (max, fraction) => {
 const RGB_Linear_Shade = (p, c) => {
   var i = parseInt, r = Math.round, [a, b, c, d] = c.split(","), P = p < 0, t = P ? 0 : 255 * p, P = P ? 1 + p : 1 - p;
   return "rgb" + (d ? "a(" : "(") + r(i(a[3] == "a" ? a.slice(5) : a.slice(4)) * P + t) + "," + r(i(b) * P + t) + "," + r(i(c) * P + t) + (d ? "," + d : ")");
-}
+};
 
 const getColor = (p, ratio, fraction) => {
   const xPos = p[0];
   const yPos = p[1];
   const xMax = ratio.w;
   const yMax = ratio.h;
-  const shade = yPos > yMax / 2 ? -yPos / 2 / yMax : (yMax-yPos) / yMax/2;
+  const shade = yPos > yMax / 2 ? -yPos / 2 / yMax : (yMax - yPos) / yMax / 2;
   const opacity = shade > 0 ? 1 - shade : 1 + shade;
-  const c1 = `rgba(252, 145, 5,${opacity})`; // orange
-  const c2 = `rgba(117, 217, 160,${opacity})`;
-  const c3 = `rgba(72, 163, 104,${opacity})`;
+  const c1 = `rgba(23, 132, 138,${opacity})`; // primary
+  const c2 = `rgba(221, 102, 38,${opacity})`;
+  const c3 = `rgba(220, 174, 48,${opacity})`;
   let color = xPos > xMax / 2 ? c2 : c3;
   if (fraction < .15) color = c1;
-  return RGB_Linear_Shade(shade, color)
+  return RGB_Linear_Shade(shade, color);
+};
+
+const isOutside = (p, ratio) => {
+  if (p[0] < 0) return true;
+  if (p[1] < 0) return true;
+  if (p[0] > ratio.w) return true;
+  if (p[1] > ratio.h) return true;
+  return false;
 };
 
 space.add({
@@ -65,12 +73,16 @@ space.add({
       form
         .fillOnly(getColor(p, ratio, fraction))
         .point(p, getValue(9, fraction), "square");
-      p.rotate2D(0.0003 / fraction/2, space.pointer);
+      p.rotate2D(0.0003 / fraction / 2, space.pointer);
+      if (isOutside(p, ratio)) {
+        pts[i][0] = Math.random() * ratio.w;
+        pts[i][1] = Math.random() * ratio.h;
+      }
     });
   },
   action: function (type, x, y, event) {
     if (type == "click") {
-      console.log(getColor(space.pointer, ratio, fraction));
+      console.log(space.pointer);
       pts[pts.length - 1] = space.pointer;
     }
   },
