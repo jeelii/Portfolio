@@ -22,18 +22,14 @@
             {
               "name": "BEM",
               "level": "3"
-            }
-          ]
-        },
-        {
-          "name": "Frameworks",
-          "skills": [{
+            },
+            {
               "name": "React.JS",
               "level": "3"
             },
             {
-              "name": "Webpack",
-              "level": "3"
+              "name": "TypeScript",
+              "level": "1"
             }
           ]
         }
@@ -79,6 +75,10 @@
             "level": "4"
           },
           {
+            "name": "GraphQL",
+            "level": "2"
+          },
+          {
             "name": "PHP",
             "level": "4"
           },
@@ -97,7 +97,12 @@
       "category": "Other",
       "sub-categories": [{
         "name": "Technologies",
-        "skills": [{
+        "skills": [
+          {
+            "name": "Webpack",
+            "level": "3"
+          },
+          {
             "name": "Git",
             "level": "5"
           },
