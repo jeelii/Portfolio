@@ -7,6 +7,7 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const HtmlCriticalPlugin = require("html-critical-webpack-plugin");
 
 module.exports = merge(common, {
   mode: "production",
@@ -29,6 +30,19 @@ module.exports = merge(common, {
           removeComments: true,
         },
       }),
+      new HtmlCriticalPlugin({
+        base: path.join(path.resolve(__dirname), 'dist/'),
+        src: 'index.html',
+        dest: 'index.html',
+        inline: true,
+        minify: true,
+        extract: true,
+        width: 375,
+        height: 565,
+        penthouse: {
+          blockJSRequests: false,
+        }
+      })
     ],
   },
   plugins: [
@@ -43,7 +57,7 @@ module.exports = merge(common, {
             {
               plugins: [{
                 removeViewBox: false,
-              }, ],
+              },],
             },
           ],
         ],
@@ -56,6 +70,6 @@ module.exports = merge(common, {
     rules: [{
       test: /\.(scss|css)$/,
       use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
-    }, ],
+    },],
   },
 });

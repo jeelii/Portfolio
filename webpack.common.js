@@ -52,7 +52,7 @@ module.exports = {
               require("./src/partials/contact.hbs")
             );
             result = Handlebars.compile(content)({
-              title: "Jenny Svensson - Full-Stack Developer in Malmö",
+              title: "Jenny Lind - Full-Stack Developer in Malmö",
               portfolio: require("./src/content/portfolio.json"),
               skills: require("./src/content/skills.json"),
             });

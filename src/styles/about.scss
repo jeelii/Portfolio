@@ -72,39 +72,39 @@
 
 .skills__level--5 {
   font-size: 2em;
-  background: mix($darkest-color,black, 96%);
+  background: mix($darkest-color,black, 98%);
 }
 
 .skills__level--4 {
   font-size: 1.75em;
-  background: mix($darkest-color,white, 96%);
+  background: mix($darkest-color,white, 98%);
 }
 
 .skills__level--3 {
   font-size: 1.3em;
-  background: mix($darkest-color,white, 92%);
+  background: mix($darkest-color,white, 96%);
 }
 
 .skills__level--2 {
   font-size: 1em;
-  background: mix($darkest-color,white, 88%);
+  background: mix($darkest-color,white, 94%);
 }
 
 .skills__level--1 {
   font-size: 0.8em;
-  background: mix($darkest-color,white, 84%);
+  background: mix($darkest-color,white, 92%);
 }
 
 .tags__category--Frontend {
-  color: $third-color;
+  color: mix($third-color,white, 70%);
 }
 
 .tags__category--Backend {
-  color: $fifth-color;
+  color: mix($fifth-color,white, 60%);
 }
 
 .tags__category--Database {
-  color: $primary-color;
+  color: mix($secondary-color,white, 90%);
 }
 
 .tags__category--Other {

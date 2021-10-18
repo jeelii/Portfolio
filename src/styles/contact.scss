@@ -19,7 +19,7 @@
 
 .story .highlight {
   font-weight: $bold;
-  color: $third-color;
+  color: mix($primary-color,black, 90%);
 }
 
 .contact {
