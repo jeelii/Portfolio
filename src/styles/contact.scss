@@ -19,21 +19,31 @@
 
 .story .highlight {
   font-weight: $bold;
-  color: mix($primary-color,black, 90%);
+  color: mix($primary-color, black, 90%);
 }
 
 .contact {
   justify-content: center;
 }
 
-.contact>* {
+.contact > * {
   margin: 10px;
 }
 
 .contact__headline {
-  color: $primary-color;
   font-weight: $bold;
   font-size: 1.2em;
+  margin-bottom: 0.15em;
+  color: $primary-color;
+}
+
+.contact .item__bullet {
+  width: 35px;
+  height: 35px;
+}
+
+.contact .item .mdi::before {
+  font-size: 20px;
 }
 
 @media screen and (min-width: 800px) {
