@@ -10,11 +10,11 @@
   }
 }
 
-nav {
+.nav {
   bottom: 0;
   left: 0;
   position: absolute;
-  background: mix($primary-color,black, 40%);
+  background: mix($primary-color, black, 40%);
   border-bottom: 3px solid $highlight;
   height: 50px;
   text-align: left;
@@ -22,14 +22,14 @@ nav {
   z-index: 99;
 }
 
-nav.fixed {
+.nav.fixed {
   bottom: inherit;
   left: 0;
   position: fixed;
   top: 0;
 }
 
-nav.fixed.desk {
+.nav.fixed.desk {
   animation: popDown 0.5s;
 }
 
@@ -74,16 +74,17 @@ nav.fixed.desk {
   color: $highlight;
 }
 
-nav .menu-icon {
+.nav .menu-icon {
   font-size: 20pt;
   line-height: 36pt;
   margin: auto 0;
   position: absolute;
   right: 5vw;
   top: 2px;
+  cursor: pointer;
 }
 
-nav .active a {
+.nav .active a {
   color: $primary-color;
 }
 
@@ -92,7 +93,6 @@ nav .active a {
   top: 0;
   width: 100%;
 }
-
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 

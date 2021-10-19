@@ -6,7 +6,7 @@ section.intro {
 }
 
 .canvas {
-  background: $darkest-color url("/src/images/backdrop.png") center center/cover;
+  background: $darkest-color url('/src/images/backdrop.png') center center/cover;
   height: 100%;
   left: 0;
   position: absolute;
@@ -28,13 +28,14 @@ section.intro {
   margin-bottom: 53px;
   position: relative;
   font-size: 25px;
+  padding: 10px 20px;
 }
 
 .intro__button .mdi::before {
   transition: transform 0.3s;
 }
 
-.button:hover .mdi::before {
+.intro__button:hover .mdi::before {
   transform: rotate(90deg);
 }
 

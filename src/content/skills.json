@@ -1,121 +1,133 @@
 {
-  "items": [{
-      "category": "Frontend",
-      "sub-categories": [{
-          "name": "Basics",
-          "skills": [{
-              "name": "HTML",
-              "level": "5"
-            },
-            {
-              "name": "CSS",
-              "level": "3"
-            },
-            {
-              "name": "SASS",
-              "level": "3"
-            },
-            {
-              "name": "JavaScript",
-              "level": "5"
-            },
-            {
-              "name": "BEM",
-              "level": "3"
-            },
-            {
-              "name": "React.JS",
-              "level": "3"
-            },
-            {
-              "name": "TypeScript",
-              "level": "1"
-            }
-          ]
+  "items": [
+    {
+      "category": "Programming",
+      "skills": [
+        {
+          "name": "JavaScript",
+          "level": "5"
+        },
+        {
+          "name": "PHP",
+          "level": "4"
+        },
+        {
+          "name": "TypeScript",
+          "level": "3"
+        },
+        {
+          "name": "TDD",
+          "level": "3"
+        },
+        {
+          "name": "C#",
+          "level": "2"
+        },
+        {
+          "name": "Shader programming",
+          "level": "2"
+        }
+      ]
+    },
+    {
+      "category": "Front-end",
+      "skills": [
+        {
+          "name": "React.JS",
+          "level": "3"
+        },
+        {
+          "name": "HTML",
+          "level": "5"
+        },
+        {
+          "name": "CSS",
+          "level": "3"
+        },
+        {
+          "name": "SASS",
+          "level": "3"
+        },
+        {
+          "name": "BEM",
+          "level": "3"
+        }
+      ]
+    },
+    {
+      "category": "Back-end",
+      "skills": [
+        {
+          "name": "Node.JS",
+          "level": "5"
+        },
+        {
+          "name": "Express.JS",
+          "level": "4"
+        },
+        {
+          "name": "REST",
+          "level": "4"
+        },
+        {
+          "name": "GraphQL",
+          "level": "2"
+        },
+        {
+          "name": "WordPress",
+          "level": "5"
+        },
+        {
+          "name": "Docker",
+          "level": "2"
         }
       ]
     },
     {
       "category": "Database",
-      "sub-categories": [{
-          "name": "Relational",
-          "skills": [{
-              "name": "MySQL",
-              "level": "4"
-            },
-            {
-              "name": "PostgreSQL",
-              "level": "4"
-            }
-          ]
+      "skills": [
+        {
+          "name": "MySQL",
+          "level": "4"
         },
         {
-          "name": "NoSQL",
-          "skills": [{
-            "name": "MongoDB",
-            "level": "3"
-          }]
+          "name": "PostgreSQL",
+          "level": "4"
+        },
+        {
+          "name": "MongoDB",
+          "level": "3"
         }
       ]
     },
     {
-      "category": "Backend",
-      "sub-categories": [{
-        "name": "Technologies",
-        "skills": [{
-            "name": "Node.JS",
-            "level": "5"
-          },
-          {
-            "name": "Express.JS",
-            "level": "4"
-          },
-          {
-            "name": "REST",
-            "level": "4"
-          },
-          {
-            "name": "GraphQL",
-            "level": "2"
-          },
-          {
-            "name": "PHP",
-            "level": "4"
-          },
-          {
-            "name": "WordPress",
-            "level": "5"
-          },
-          {
-            "name": "Docker",
-            "level": "2"
-          }
-        ]
-      }]
-    },
-    {
       "category": "Other",
-      "sub-categories": [{
-        "name": "Technologies",
-        "skills": [
-          {
-            "name": "Webpack",
-            "level": "3"
-          },
-          {
-            "name": "Git",
-            "level": "5"
-          },
-          {
-            "name": "GitHub",
-            "level": "4"
-          },
-          {
-            "name": "Postman",
-            "level": "2"
-          }
-        ]
-      }]
+      "skills": [
+        {
+          "name": "Webpack",
+          "level": "3"
+        },
+        {
+          "name": "Git",
+          "level": "5"
+        },
+        {
+          "name": "GitHub",
+          "level": "4"
+        },
+        {
+          "name": "Postman",
+          "level": "2"
+        },
+        {
+          "name": "Jest",
+          "level": "3"
+        },
+        {
+          "name": "Mocha",
+          "level": "3"
+        }
+      ]
     }
   ]
 }

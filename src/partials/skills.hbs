@@ -38,21 +38,26 @@
         Skills
       </h2>
       <h3 class="section__subheader">
-        As a full-stack developer, these are some of the tools I use.
+        As a full-stack developer, these are some of the technologies I use.
       </h3>
-      {{! <button class="button">All</button>
-    <button class="button">Full-stack</button>
-    <button class="button">Back-end</button>
-    <button class="button">Front-end</button>
-    <button class="button">Software</button> }}
-      <ul id="skills" class="collection flex row wrap tags">
+      <nav class="skills__nav">
         {{#each skills.items}}
-          {{#each sub-categories}}
-            {{#each skills}}
-              <li class="tags__category--{{../../category}} tags__category--{{../name}} skills__level--{{level}} skills__item">
-                #{{name}}
-              </li>
-            {{/each}}
+          <button class="button skills__button skills__button--{{category}}" data-skills-category="{{category}}" aria-label="Highlight {{category}}">{{category}}</button>
+        {{/each}}
+        <button class="button skills__button--reload" aria-label="Reload and randomize"><span class="mdi mdi-reload"></span></button>
+        <button class="button skills__button--sort"  aria-label="Sort alphabetically"><span class="mdi mdi-sort-alphabetical-variant"></span></button>
+      </nav>
+      <ul id="skills__items" class="collection flex row wrap tags">
+        {{#each skills.items}}
+          {{#each skills}}
+            <li
+              class="skills__item skills__level--{{level}}"
+              data-skill="{{name}}"
+              data-skill-level="{{level}}"
+              data-skills-category="{{../category}}"
+            >
+              {{name}}
+            </li>
           {{/each}}
         {{/each}}
       </ul>
