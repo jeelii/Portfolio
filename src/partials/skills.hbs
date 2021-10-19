@@ -38,23 +38,24 @@
         Skills
       </h2>
       <h3 class="section__subheader">
-        As a full-stack developer, these are some of the technologies I use.
+        As a full-stack developer, these are some of the technologies I apply.
       </h3>
       <nav class="skills__nav">
         {{#each skills.items}}
-          <button class="button skills__button skills__button--{{category}}" data-skills-category="{{category}}" aria-label="Highlight {{category}}">{{category}}</button>
+          <button class="button skills__button skills__button--{{category}}" data-skill-category="{{category}}" aria-label="Highlight {{category}}">{{category}}</button>
         {{/each}}
         <button class="button skills__button--reload" aria-label="Reload and randomize"><span class="mdi mdi-reload"></span></button>
         <button class="button skills__button--sort"  aria-label="Sort alphabetically"><span class="mdi mdi-sort-alphabetical-variant"></span></button>
+        <button class="button skills__button--level"  aria-label="Sort by level"><span class="mdi mdi-sort-variant"></span></button>
       </nav>
       <ul id="skills__items" class="collection flex row wrap tags">
         {{#each skills.items}}
           {{#each skills}}
             <li
-              class="skills__item skills__level--{{level}}"
+              class="skills__item"
               data-skill="{{name}}"
               data-skill-level="{{level}}"
-              data-skills-category="{{../category}}"
+              data-skill-category="{{../category}}"
             >
               {{name}}
             </li>

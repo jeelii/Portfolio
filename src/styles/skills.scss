@@ -11,7 +11,6 @@
 .skills__item {
   display: inline-block;
   margin: 2px;
-  padding: 5px 10px;
   background: $darkest-color;
   color: white;
   transition: all 0.75s;
@@ -21,27 +20,32 @@
   opacity: 0.25;
 }
 
-.skills__level--5 {
+.skills__item[data-skill-level="5"] {
+  padding: 5px 10px;
   font-size: 2em;
   background: mix($darkest-color, black, 98%);
 }
 
-.skills__level--4 {
-  font-size: 1.75em;
+.skills__item[data-skill-level="4"] {
+  padding: 4px 8px;
+  font-size: 1.7em;
   background: mix($darkest-color, white, 98%);
 }
 
-.skills__level--3 {
+.skills__item[data-skill-level="3"] {
+  padding: 4px 8px;
   font-size: 1.3em;
   background: mix($darkest-color, white, 96%);
 }
 
-.skills__level--2 {
+.skills__item[data-skill-level="2"] {
+  padding: 3px 6px;
   font-size: 1em;
   background: mix($darkest-color, white, 94%);
 }
 
-.skills__level--1 {
+.skills__item[data-skill-level="1"] {
+  padding: 3px 6px;
   font-size: 0.8em;
   background: mix($darkest-color, white, 92%);
 }
@@ -51,63 +55,63 @@
   color: $darkest-color;
 }
 
-.skills__button[data-skills-category='Programming'] {
+.skills__button[data-skill-category="Programming"] {
   background: mix($highlight, white, 75%);
 }
 
-.skills__button[data-skills-category='Programming']:hover {
+.skills__button[data-skill-category="Programming"]:hover {
   background: $highlight;
 }
 
-.skills__item[data-skills-category='Programming'] {
+.skills__item[data-skill-category="Programming"] {
   color: mix($highlight, white, 90%);
 }
 
-.skills__button[data-skills-category='Front-end'] {
+.skills__button[data-skill-category="Front-end"] {
   background: mix($third-color, white, 75%);
 }
 
-.skills__button[data-skills-category='Front-end']:hover {
+.skills__button[data-skill-category="Front-end"]:hover {
   background: $third-color;
 }
 
-.skills__item[data-skills-category='Front-end'] {
+.skills__item[data-skill-category="Front-end"] {
   color: mix($third-color, white, 70%);
 }
 
-.skills__button[data-skills-category='Back-end'] {
+.skills__button[data-skill-category="Back-end"] {
   background: mix($fifth-color, white, 75%);
 }
 
-.skills__button[data-skills-category='Back-end']:hover {
+.skills__button[data-skill-category="Back-end"]:hover {
   background: $fifth-color;
 }
 
-.skills__item[data-skills-category='Back-end'] {
+.skills__item[data-skill-category="Back-end"] {
   color: mix($fifth-color, white, 60%);
 }
 
-.skills__button[data-skills-category='Database'] {
+.skills__button[data-skill-category="Database"] {
   background: mix($secondary-color, white, 75%);
 }
 
-.skills__button[data-skills-category='Database']:hover {
+.skills__button[data-skill-category="Database"]:hover {
   background: $secondary-color;
 }
 
-.skills__item[data-skills-category='Database'] {
+.skills__item[data-skill-category="Database"] {
   color: mix($secondary-color, white, 90%);
 }
 
-.skills__button[data-skills-category='Other'] {
+.skills__button[data-skill-category="Other"] {
   background: mix($fourth-color, white, 75%);
 }
 
-.skills__button[data-skills-category='Other']:hover {
+.skills__button[data-skill-category="Other"]:hover {
   background: $fourth-color;
 }
 
-.skills__item[data-skills-category='Other'] {
+.skills__item[data-skill-category="Other"] {
   color: $fourth-color;
 }
 
