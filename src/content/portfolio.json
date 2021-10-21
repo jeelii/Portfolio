@@ -1,12 +1,21 @@
 {
-  "items": [{
+  "items": [
+    {
       "title": "Rentify",
       "responsive": "yes",
       "team": "Me, Elias Helander and Raghul Mohan",
       "image": "images/rentify-desktop.png",
       "image2": "images/rentify-mobile.png",
-      "tags": ["Node.JS", "Expres.JS", "PostgreSQL", "React.JS", "REST Api", "Docker", "Firebase"],
-      "description": "Rent stuff you don't need to buy! Final project of the </SALT> training.",
+      "tags": [
+        "Node.JS",
+        "Expres.JS",
+        "PostgreSQL",
+        "React.JS",
+        "REST Api",
+        "Docker",
+        "Firebase"
+      ],
+      "description": "As our final project during the </SALT> training I took charge of the backend and made a REST-api with Node.js and Express.js. I also contributed to the frontend with React.js.",
       "link": "https://rentify-salt.netlify.app/",
       "code": "https://github.com/eliashelander/rentify"
     },
@@ -18,6 +27,16 @@
       "tags": ["REST Api", "NodeJS", "Express", "React", "JavaScript", "SASS"],
       "description": "Track your workouts with this app! My React + REST app as a \"hackday\" (24 hour) project during the </SALT> training.",
       "code": "https://github.com/jennysvensson/ActivityTracker"
+    },
+    {
+      "title": "Infinite Gifs",
+      "responsive": "yes",
+      "image": "images/infinite-gifs-desktop.png",
+      "image2": "images/infinite-gifs-desktop.gif",
+      "tags": ["ReactJS", "Axios", "Infinite scroll", "Giphy API"],
+      "description": "React app with infinite scroll, custom hooks, history state and local storage to remember your searches.",
+      "link": "https://jennysvensson.github.io/infinite-gifs/",
+      "code": "https://github.com/jennysvensson/infinite-gifs"
     },
     {
       "title": "React TO-DO-app",
