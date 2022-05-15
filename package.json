@@ -47,19 +47,20 @@
     "image-resize-big": "npx batch-image-resizer -i ./src/images/originals/big -o ./src/images -s '[1700]' -k",
     "start": "webpack-dev-server  --watch-files ./src/partials/ --config webpack.dev.js --open",
     "add-domain": "echo \"jennysvensson.com\" > dist/CNAME",
-    "build": "webpack --config webpack.prod.js && npm run add-domain",
+    "build-cname": "webpack --config webpack.prod.js && npm run add-domain",
+    "build": "webpack --config webpack.prod.js",
     "deploy": "gh-pages --dist 'dist' --branch 'release'"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jennysvensson/full-stack-portfolio.git"
+    "url": "git+https://github.com/jeelii/full-stack-portfolio.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jennysvensson/full-stack-portfolio/issues"
+    "url": "https://github.com/jeelii/full-stack-portfolio/issues"
   },
-  "homepage": "https://github.com/jennysvensson/full-stack-portfolio#readme",
+  "homepage": "https://github.com/jeelii/full-stack-portfolio#readme",
   "dependencies": {}
 }

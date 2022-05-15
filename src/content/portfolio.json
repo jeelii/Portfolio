@@ -17,7 +17,7 @@
       ],
       "description": "As our final project during the </SALT> training I took charge of the backend and made a REST-api with Node.js and Express.js. I also contributed to the frontend with React.js.",
       "link": "https://rentify-salt.netlify.app/",
-      "code": "https://github.com/eliashelander/rentify"
+      "code": "https://github.com/The-Rebel-Pack/Rentify"
     },
     {
       "title": "Activity Tracker",
@@ -26,17 +26,23 @@
       "image2": "images/activity-tracker-desktop-log-date.png",
       "tags": ["REST Api", "NodeJS", "Express", "React", "JavaScript", "SASS"],
       "description": "Track your workouts with this app! My React + REST app as a \"hackday\" (24 hour) project during the </SALT> training.",
-      "code": "https://github.com/jennysvensson/ActivityTracker"
+      "code": "https://github.com/jeelii/Activity-Tracker"
     },
     {
       "title": "Infinite Gifs",
       "responsive": "yes",
       "image": "images/infinite-gifs-desktop.png",
       "image2": "images/infinite-gifs-desktop.gif",
-      "tags": ["ReactJS", "Axios", "Infinite scroll", "Giphy API"],
-      "description": "React app with infinite scroll, custom hooks, history state and local storage to remember your searches.",
-      "link": "https://jennysvensson.github.io/infinite-gifs/",
-      "code": "https://github.com/jennysvensson/infinite-gifs"
+      "tags": [
+        "ReactJS",
+        "Axios",
+        "Infinite scroll",
+        "Custom hooks",
+        "Giphy API"
+      ],
+      "description": "React app with infinite scroll, custom hooks, history state and local storage.",
+      "link": "https://jeelii.github.io/Infinite-Gifs/",
+      "code": "https://github.com/jeelii/Infinite-Gifs"
     },
     {
       "title": "React TO-DO-app",
@@ -45,8 +51,8 @@
       "image": "images/todo-list-react-mobile.png",
       "tags": ["React", "JavaScript", "HTML", "CSS"],
       "description": "A React app that lets you create and edit your todo-list, and even stores it in the browser for you until next time. Weekend project during the </SALT> training.",
-      "code": "https://github.com/jennysvensson/To-Do-App-React",
-      "link": "https://jennysvensson.github.io/To-Do-App-React/"
+      "code": "https://github.com/jeelii/To-Do-App-React",
+      "link": "https://jeelii.github.io/To-Do-App-React/"
     },
     {
       "title": "JavaScript TO-DO-app",
@@ -55,8 +61,8 @@
       "image2": "images/todo-list-js-mobile.png",
       "tags": ["JavaScript", "HTML", "CSS"],
       "description": "A vanilla JavaScript app that lets you create and edit your todo-list, and even stores it in the browser for you until next time. Weekend project during the </SALT> training.",
-      "code": "https://github.com/jennysvensson/To-do-App-JS",
-      "link": "https://jennysvensson.github.io/To-do-App-JS/"
+      "code": "https://github.com/jeelii/To-do-App-JS",
+      "link": "https://jeelii.github.io/To-do-App-JS/"
     },
     {
       "title": "Avfallskollen",
