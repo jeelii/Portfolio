@@ -6,4 +6,4 @@ Tech-stack:
 JavaScript, HTML, SCSS, CSS, Handlebars, Webpack
 
 Launch website:
-https://jeelii.github.io/Portfolio
+https://jeelii.github.io
