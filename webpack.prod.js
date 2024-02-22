@@ -1,29 +1,51 @@
-const path = require("path");
-const common = require("./webpack.common");
-const { merge } = require("webpack-merge");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-const HtmlCriticalPlugin = require("html-critical-webpack-plugin");
+const path = require('path')
+const common = require('./webpack.common')
+const { merge } = require('webpack-merge')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
+const HtmlCriticalPlugin = require('html-critical-webpack-plugin')
 
 module.exports = merge(common, {
-  mode: "production",
+  mode: 'production',
   output: {
-    filename: "scripts/[name].[fullhash:6].js",
-    path: path.resolve(__dirname, "dist"),
-    assetModuleFilename: "assets/[name][ext][query]",
+    filename: 'scripts/[name].[fullhash:6].js',
+    path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'assets/[name][ext][query]',
   },
   optimization: {
     minimizer: [
-      new OptimizeCssAssetsPlugin(),
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.imageminMinify,
+          options: {
+            plugins: [
+              ['gifsicle', { interlaced: true }],
+              ['jpegtran', { progressive: true }],
+              ['optipng', { optimizationLevel: 5 }],
+              [
+                'svgo',
+                {
+                  plugins: [
+                    {
+                      removeViewBox: false,
+                    },
+                  ],
+                },
+              ],
+            ],
+          },
+        },
+      }),
+      new CssMinimizerPlugin(),
       new TerserPlugin(),
       new HtmlWebpackPlugin({
-        HTML_PATH: path.resolve(__dirname, "src"),
-        favicon: "./src/assets/favicon.ico",
-        template: "./src/index.hbs",
+        HTML_PATH: path.resolve(__dirname, 'src'),
+        favicon: './src/assets/favicon.ico',
+        template: './src/index.hbs',
         minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: true,
@@ -41,35 +63,20 @@ module.exports = merge(common, {
         height: 565,
         penthouse: {
           blockJSRequests: false,
-        }
-      })
+        },
+      }),
     ],
   },
   plugins: [
-    new ImageMinimizerPlugin({
-      minimizerOptions: {
-        plugins: [
-          ["gifsicle", { interlaced: true }],
-          ["jpegtran", { progressive: true }],
-          ["optipng", { optimizationLevel: 5 }],
-          [
-            "svgo",
-            {
-              plugins: [{
-                removeViewBox: false,
-              },],
-            },
-          ],
-        ],
-      },
-    }),
-    new MiniCssExtractPlugin({ filename: "styles/[name].[fullhash:6].css" }),
+    new MiniCssExtractPlugin({ filename: 'styles/[name].[fullhash:6].css' }),
     new CleanWebpackPlugin(),
   ],
   module: {
-    rules: [{
-      test: /\.(scss|css)$/,
-      use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
-    },],
+    rules: [
+      {
+        test: /\.(scss|css)$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+    ],
   },
-});
+})
